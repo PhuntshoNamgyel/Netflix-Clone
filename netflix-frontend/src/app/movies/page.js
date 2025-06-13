@@ -21,7 +21,7 @@ const movies = [
   {
     id: 4,
     title: "One Piece",
-    poster_path: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuOCUZ1H1jw-eQVtd06T9fmE8C236IrR-J3qluaGw7rMB5pxBhsJmnVGjsfTFBb73XBEc&usqp=CAU",
+    poster_path: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUdzCgZDK9NG43Xgq1vf9mIVwqGaONerZ9SA&s",
   },  
   {
     id: 5,
@@ -67,7 +67,7 @@ const movies = [
 
 export default function MoviesListPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-black text-white">
       <h1 className="text-3xl font-bold mb-6">All Movies</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {movies.map((movie) => (

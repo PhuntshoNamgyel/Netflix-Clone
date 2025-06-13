@@ -31,15 +31,17 @@ export default function SignupPage() {
   return (
     <div
       className="flex items-center justify-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('Netflix-Clone/netflix-frontend/public/money-heist-banner.jpg')" }} // Replace with your image path
+      style={{
+        backgroundImage: "url('https://netflix-demo-frontend.vercel.app/images/netflix-background.jpg')", 
+      }}
     >
-      <div className="bg-white bg-opacity-90 p-8 rounded shadow-md w-full max-w-md">
+      <div className="bg-black text-white bg-opacity-70 p-8 rounded shadow-md w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4">Signup</h1>
         {error && <p className="text-red-500 mb-4">{error}</p>}
         {success && <p className="text-green-500 mb-4">{success}</p>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="name" className="block text-sm font-medium text-white-700">
               Name
             </label>
             <input
@@ -52,7 +54,7 @@ export default function SignupPage() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium text-white-700">
               Email
             </label>
             <input
@@ -65,7 +67,7 @@ export default function SignupPage() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="password" className="block text-sm font-medium text-white-700">
               Password
             </label>
             <input
@@ -78,7 +80,7 @@ export default function SignupPage() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="confirmPassword" className="block text-sm font-medium text-white-700">
               Confirm Password
             </label>
             <input

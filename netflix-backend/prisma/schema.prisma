@@ -1,0 +1,29 @@
+// Define Database Connection
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Define User Model
+model User {
+  id        String  @id @default(uuid())
+  email     String  @unique
+  password  String
+  role      String  @default("user") // Can be "admin" or "user"
+  videos    Video[]
+}
+
+// Define Video Model (with Correct Relations)
+model Video {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  url         String   // Supabase video link
+  ownerId     String   @map("owner_id")  // Foreign Key
+  owner       User     @relation(fields: [ownerId], references: [id])
+}

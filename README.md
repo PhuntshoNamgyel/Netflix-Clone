@@ -36,7 +36,7 @@ The frontend is built using React and Tailwind CSS, while the backend is develop
 ### Backend
 - **Node.js**: JavaScript runtime for building the backend.
 - **Express**: Web framework for creating RESTful APIs.
-- **Database Driver**: MongoDB (`mongoose`) or PostgreSQL (`pg`).
+- **Database Driver**: PostgreSQL (`pg`).
 - **Cors**: Middleware for handling cross-origin requests.
 - **Body-parser**: Middleware for parsing incoming request bodies.
 - **Dotenv**: For managing environment variables.

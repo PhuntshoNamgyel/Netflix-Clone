@@ -51,7 +51,7 @@ export default function SignupPage() {
       const data = await res.json();
 
       if (res.ok) {
-        setSuccess(data.message || "Signup successful! You can now log in.");
+        setSuccess(data.message || "User registered successfully. Please check your email for verification.");
         setName("");
         setEmail("");
         setPassword("");
@@ -103,12 +103,14 @@ export default function SignupPage() {
   };
 
   return (
-    <div
-      className="flex items-center justify-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('Netflix-Clone/netflix-frontend/public/money-heist-banner.jpg')" }}
-    >
-      <div className="bg-white bg-opacity-90 p-8 rounded shadow-md w-full max-w-md">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="bg-white text-gray-900 p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4">Signup</h1>
+
+        {/* Success and resend feedback */}
+        {success && <p className="text-green-600 mb-4">{success}</p>}
+        {resendMessage && <p className="text-green-600 mb-4">{resendMessage}</p>}
+        {resendError && <p className="text-red-500 mb-4">{resendError}</p>}
 
         {/* Error and Resend Button */}
         {error && (
@@ -134,11 +136,6 @@ export default function SignupPage() {
             ))}
           </ul>
         )}
-
-        {/* Success and resend feedback */}
-        {success && <p className="text-green-500 mb-4">{success}</p>}
-        {resendMessage && <p className="text-green-500 mb-4">{resendMessage}</p>}
-        {resendError && <p className="text-red-500 mb-4">{resendError}</p>}
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -202,7 +199,10 @@ export default function SignupPage() {
           </button>
         </form>
         <p className="mt-4 text-sm text-gray-600">
-          Already have an account? <a href="/login" className="text-red-600 hover:underline">Log in</a>
+          Already have an account?{" "}
+          <a href="/login" className="text-red-600 hover:underline">
+            Log in
+          </a>
         </p>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function LoginPage() {
         headers: {
           "Content-Type": "application/json"
         },
-        credentials: "include", // for cookies if backend uses them
+        credentials: "include",
         body: JSON.stringify({ email, password })
       });
 
@@ -94,24 +94,26 @@ export default function LoginPage() {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4">Login</h1>
-        {/* Error and resend button */}
-        {error && (
-          <div className="mb-2">
-            <p className="text-red-500">{error}</p>
-            {showResend && (
-              <button
-                className="w-full bg-yellow-500 text-white mt-2 py-2 px-4 rounded hover:bg-yellow-600"
-                onClick={handleResendVerification}
-                disabled={loading}
-              >
-                {loading ? "Resending..." : "Resend Verification Email"}
-              </button>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        {message && <p className="text-green-600 mb-4">{message}</p>}
+        {showResend && (
+          <div className="mb-4">
+            <button
+              type="button"
+              className="text-blue-600 hover:underline"
+              disabled={loading}
+              onClick={handleResendVerification}
+            >
+              Resend Verification Email
+            </button>
+            {resendMessage && (
+              <p className="text-green-600 mt-2">{resendMessage}</p>
+            )}
+            {resendError && (
+              <p className="text-red-500 mt-2">{resendError}</p>
             )}
           </div>
         )}
-        {resendError && <p className="text-red-500 mb-4">{resendError}</p>}
-        {message && <p className="text-green-600 mb-4">{message}</p>}
-        {resendMessage && <p className="text-green-600 mb-4">{resendMessage}</p>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -120,6 +122,7 @@ export default function LoginPage() {
             <input
               type="email"
               id="email"
+              autoComplete="username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
@@ -133,6 +136,7 @@ export default function LoginPage() {
             <input
               type="password"
               id="password"
+              autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
@@ -148,7 +152,10 @@ export default function LoginPage() {
           </button>
         </form>
         <p className="mt-4 text-sm text-gray-600">
-          Don't have an account? <a href="/signup" className="text-red-600 hover:underline">Sign up</a>
+          Don&apos;t have an account?{" "}
+          <a href="/signup" className="text-red-600 hover:underline">
+            Sign up
+          </a>
         </p>
       </div>
     </div>

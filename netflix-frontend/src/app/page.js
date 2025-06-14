@@ -15,112 +15,40 @@ import {
 
 // Use a larger set of unique poster images for more variety
 const movieData = [
-  {
-    title: "Wonder Woman 1984",
-    poster: "https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
-  },
-  {
-    title: "Squid Game",
-    poster: "https://upload.wikimedia.org/wikipedia/en/7/7b/Squid_Game_season_1_poster.png",
-  },
-  {
-    title: "The Bet",
-    poster: "https://resizing.flixster.com/fT45XgGbgfflfbrVzGwoj0V6otA=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvZWRkYmNjN2MtOWU4Ny00OGY4LWFhYTctOTE5MTVkMzU1ZjE5LmpwZw==",
-  },
-  {
-    title: "The Witches",
-    poster: "https://image.tmdb.org/t/p/w500/4ZocdxnOO6q2UbdKye2wgofLFhB.jpg",
-  },
-  {
-    title: "Greenland",
-    poster: "https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
-  },
-  {
-    title: "Monster Hunter",
-    poster: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
-  },
-  {
-    title: "The Call",
-    poster: "https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
-  },
-  {
-    title: "Joker",
-    poster: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-  },
-  {
-    title: "The SpongeBob Movie: Sponge on the Run",
-    poster: "https://image.tmdb.org/t/p/w500/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg",
-  },
-  {
-    title: "My Demon",
-    poster: "https://artworks.thetvdb.com/banners/v4/series/429870/posters/654500c1c741c.jpg",
-  },
-  {
-    title: "Avengers: Infinity War",
-    poster: "https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-  },
-  {
-    title: "Joker (Alt)",
-    poster: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-  },
-  {
-    title: "The New Mutants",
-    poster: "https://image.tmdb.org/t/p/w500/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg",
-  },
-  {
-    title: "The Lion King",
-    poster: "https://image.tmdb.org/t/p/w500/riYInlsq2kf1AWoGm80JQW5dLKp.jpg",
-  },
-  {
-    title: "The Grudge",
-    poster: "https://image.tmdb.org/t/p/w500/6agKYU5IQFpuDyUYPu39w7UCRrJ.jpg",
-  },
-  {
-    title: "Parasite",
-    poster: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-  },
-  {
-    title: "Bloodshot",
-    poster: "https://image.tmdb.org/t/p/w500/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg",
-  },
-  {
-    title: "The Outpost",
-    poster: "https://image.tmdb.org/t/p/w500/4n8QNNdk4BOX9Dslfbz5Dy6j1HK.jpg",
-  },
-  {
-    title: "Hard Kill",
-    poster: "https://image.tmdb.org/t/p/w500/6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg",
-  },
-  {
-    title: "Unhinged",
-    poster: "https://image.tmdb.org/t/p/w500/2AwPvNHphpZBJDqjZKVuMAbvS0v.jpg",
-  },
-  {
-    title: "The Empty Man",
-    poster: "https://image.tmdb.org/t/p/w500/7D430eqZj8y3oVkLFfsWXGRcpEG.jpg",
-  },
-  {
-    title: "The Midnight Sky",
-    poster: "https://image.tmdb.org/t/p/w500/6ApDtO7xaWAfPqfi2IARXIzj8QS.jpg",
-  },
-  {
-    title: "Mortal Kombat",
-    poster: "https://image.tmdb.org/t/p/w500/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg",
-  },
-  {
-    title: "Space Sweepers",
-    poster: "https://image.tmdb.org/t/p/w500/6zbKgwgaaCyyBXE4Sun4oWQfQmi.jpg",
-  },
-  { title: "Random Movie 1", poster: "https://picsum.photos/id/1015/400/600" },
-  { title: "Random Movie 2", poster: "https://picsum.photos/id/1016/400/600" },
-  { title: "Random Movie 3", poster: "https://picsum.photos/id/1025/400/600" },
-  { title: "Random Movie 4", poster: "https://picsum.photos/id/1027/400/600" },
-  { title: "Random Movie 5", poster: "https://picsum.photos/id/1035/400/600" },
-  { title: "Random Movie 6", poster: "https://picsum.photos/id/1041/400/600" },
-  { title: "Random Movie 7", poster: "https://picsum.photos/id/1043/400/600" },
-  { title: "Random Movie 8", poster: "https://picsum.photos/id/1050/400/600" },
-  { title: "Random Movie 9", poster: "https://picsum.photos/id/1062/400/600" },
-  { title: "Random Movie 10", poster: "https://picsum.photos/id/1069/400/600" },
+  { title: "Squid Game", poster: "https://upload.wikimedia.org/wikipedia/en/7/7b/Squid_Game_season_1_poster.png", },
+  { title: "Love Death + Robots", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2H2wO2mqTQB_ET6r5ARUXvcb0vrMVJoiWBw&s", },
+  { title: "The Bet", poster: "https://resizing.flixster.com/fT45XgGbgfflfbrVzGwoj0V6otA=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvZWRkYmNjN2MtOWU4Ny00OGY4LWFhYTctOTE5MTVkMzU1ZjE5LmpwZw==", },
+  { title: "Start-Up", poster: "https://miro.medium.com/v2/resize:fit:1400/1*am-e_KwXVlAdXVrYF81L6g.jpeg", },
+  { title: "Friendly Rivalry", poster: "https://upload.wikimedia.org/wikipedia/en/a/a7/Friendly_Rivalry_poster.png", },
+  { title: "WonderLand", poster: "https://m.media-amazon.com/images/M/MV5BY2EzN2MwOGUtYzlkNi00MmI0LTlkZmUtOWEzZTEwZTdhMjMyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", },
+  { title: "CyberPunk: Edgerunners", poster: "https://static0.srcdn.com/wordpress/wp-content/uploads/2023/05/cyberpunk-edgerunners-tv-poster.jpg", },
+  { title: "The School Nurse Files", poster: "https://thesmartlocal.kr/wp-content/uploads/2023/04/Short-Korean-dramas-13-691x1024.jpg",},
+  { title: "My Happy Marriage", poster: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24927836_b_v13_aa.jpg", },
+  { title: "My Demon", poster: "https://artworks.thetvdb.com/banners/v4/series/429870/posters/654500c1c741c.jpg", },
+  { title: "Doona", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRlWj8nXbfPacTQWES5GQ_YAJIRjGyApexc2CNWyIODf2u4Z8nMg7lmAsexgrCu9NUiuk&usqp=CAU", },
+  { title: "The Mask Girl", poster: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/09/mask-girl-netflix-poster.jpg", },
+  { title: "Romantic Killer", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5B2JVi9lGpETHl_OxlgV1n8ucvWJxtT6ATR_P8RRpLAB8AdIuq533GpzLWDKdz-JYSYY&usqp=CAU", },
+  { title: "Enola Holmes", poster: "https://image.tmdb.org/t/p/w500/riYInlsq2kf1AWoGm80JQW5dLKp.jpg", },
+  { title: "The Alchemy Of Souls", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsKsGqkhteTm0knOAgNIP1cl1grwVC3fvcCA&s", },
+  { title: "Parasite", poster: "https://thedramacorner.com/wp-content/uploads/2024/04/ptg.jpg?w=292&h=429", },
+  { title: "King The Land", poster: "https://i.pinimg.com/736x/dd/ed/52/dded52b91dc518edf7c0021bb66901cc.jpg", },
+  { title: "One Piece", poster: "https://sequentialplanet.com/wp-content/uploads/2023/08/MV5BYzczMzllN2UtNDJmOS00MmE5LWE2MWYtNGEwODcwMDc2M2YyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_-1.jpg", },
+  { title: "Sweet And Sour", poster: "https://www.bworldonline.com/wp-content/uploads/2021/06/SweetnSour_Main_Couple_Vertical_RGB_EN-UK_PRE-1.jpg", },
+  { title: "When Life Gives You Tangerines", poster: "https://cdn.k-ennews.com/news/photo/202503/7511_19970_4951.jpg" },
+  { title: "The Fabulous", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG6Ydy-9ZCcSvntD6PHGsHs2COMkxU8sQp0HBhCHELW-6yykkdLKn7WRWbiUx7kkJhlP8&usqp=CAU", },
+  { title: "Love and Leashes", poster: "https://www.whats-on-netflix.com/wp-content/uploads/2022/01/love-and-leashes-netflix-poster.jpeg",},
+  { title: "Twenty Five Twenty One", poster: "https://i.pinimg.com/736x/ae/5a/1e/ae5a1e1ab66355aa0f1234bbcd102295.jpg", },
+  { title: "Sweet Home", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB5OYyVbse54QwrSa79Cpphev1ogok7GT8kw&s", },
+  { title: "Memories Of Ahlambra", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfXUGa16QjI1V9aZUhBf4G3a22PcLpNNMMJg&s" },
+  { title: "My Name", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcobB1iJhR7CmfErGvRUVhe6VaruKE2kMW0A&s" },
+  { title: "The Frog", poster: "https://preview.redd.it/netflix-drama-the-frog-teaser-character-posters-release-on-v0-c08gv9zbq0hd1.jpg?width=650&format=pjpg&auto=webp&s=0280553fd97e45ea6d746fc3db059eddad1b933a" },
+  { title: "Business Proposal", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-xpIvhHauNbdZrg4wWWrAUVUsS2Q3s7oIw&s" },
+  { title: "Celebrity", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmYEn6FjmmREaVU6CK7HTxIWRAIvMYwrhAA&s" },
+  { title: "Alive", poster: "https://resizing.flixster.com/RbankXkynBw7_H-Kt6pNdaJ5PF0=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2E0NDAzNzQ0LWMyNzgtNDRiNC1hOWI4LTI3MDlhOTBiNzMzYS53ZWJw" },
+  { title: "All Of Us Are Dead", poster: "https://ih1.redbubble.net/image.3230049794.8974/fposter,small,wall_texture,square_product,600x600.jpg" },
+  { title: "Suzume", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloR3cAR8SLUKUPw2v8RyqpDRJz7-mMHHzrMZp8-vt5hBxN5uXvSgZ17DCXLmkr8-2FLY&usqp=CAU" },
+  { title: "Yasuki", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPM1YgezAVBJifCA15yI57bY481d6vM-FrFQ&s" },
+  { title: "Demon Slayer", poster: "https://hips.hearstapps.com/hmg-prod/images/best-anime-netflix-demon-slayer-1668636437.png" },
 ];
 
 function Carousel({ title, movies, onSelect }) {

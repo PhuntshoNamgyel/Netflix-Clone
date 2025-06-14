@@ -42,7 +42,7 @@ const movies = [
 
 export default function MoviesListPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-black text-white">
       <h1 className="text-3xl font-bold mb-6">Mylist</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {movies.map((movie) => (

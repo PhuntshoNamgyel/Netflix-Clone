@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import DarkModeToggle from "./DarkModeToggle";
 import styles from "./NavBar.module.css";
 
 const NavBar = () => {
@@ -48,8 +47,6 @@ const NavBar = () => {
           <Link href="/login">Login</Link>
         </li>
       </ul>
-     
-      <DarkModeToggle />
     </div>
   );
 };

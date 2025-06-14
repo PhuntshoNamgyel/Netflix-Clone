@@ -234,7 +234,7 @@ export default function Page() {
             </div>
           </div>
           <img
-            src="./movies/money_heist_banner.jpg"
+            src="/money-heist-banner.jpg"
             alt="Money Heist Banner"
             className="absolute right-0 top-0 h-full object-cover w-full md:w-2/3 opacity-60 md:opacity-100"
             style={{ objectPosition: "right" }}

@@ -1,11 +1,13 @@
 import React from "react";
 
 export default function HeroBanner({ title, description, imageUrl }) {
+  console.log("ImageUrl received:", imageUrl); // Debug log
+  
   return (
     <div
       className="w-full h-64 md:h-96 flex items-end bg-cover bg-center rounded-lg mb-8"
       style={{
-        backgroundImage: `url('https://6.soompi.io/wp-content/uploads/image/bc1459625897404b858a0dd90f1fb9d6/dummy.jpeg?s=900x600&e=t')`,
+        backgroundImage: `url('${imageUrl || '/money-heist-banner.jpg'}')`,
       }}
     >
       <div className="bg-gradient-to-t from-black/80 to-transparent w-full p-8 rounded-b-lg">

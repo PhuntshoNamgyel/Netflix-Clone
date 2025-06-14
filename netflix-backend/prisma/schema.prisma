@@ -1,0 +1,68 @@
+// Define Database Connection
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Define User Model with Authentication Fields
+model User {
+  id                    String    @id @default(uuid())
+  email                 String    @unique
+  password              String
+  name                  String?
+  role                  String    @default("user") // "admin", "editor", "user"
+  isEmailVerified       Boolean   @default(false)
+  emailVerifyToken      String?   @unique
+  emailVerifyExpires    DateTime?
+  resetPasswordToken    String?   @unique
+  resetPasswordExpires  DateTime?
+  refreshToken          String?
+  lastLogin             DateTime?
+  loginAttempts         Int       @default(0)
+  lockUntil             DateTime?
+  isActive              Boolean   @default(true)
+  preferences           Json?     // For theme, notifications, etc.
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+  videos                Video[]
+  sessions              Session[]
+
+  @@map("users")
+}
+
+// Define Session Model for session management
+model Session {
+  id           String   @id @default(uuid())
+  userId       String   @map("user_id")
+  refreshToken String   @unique
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+// Define Video Model (with Correct Relations)
+model Video {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  url         String   // Supabase video link
+  thumbnailUrl String? // Optional thumbnail
+  duration    Int?     // Duration in seconds
+  genre       String?
+  releaseYear Int?
+  isPublished Boolean  @default(true)
+  viewCount   Int      @default(0)
+  ownerId     String   @map("owner_id")  // Foreign Key
+  owner       User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("videos")
+}

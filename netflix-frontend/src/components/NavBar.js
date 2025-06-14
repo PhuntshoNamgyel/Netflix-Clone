@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import DarkModeToggle from "./DarkModeToggle";
 import styles from "./NavBar.module.css";
 import { useAuthStore } from "../store/auth"; // <-- import zustand auth store
 
@@ -76,7 +75,6 @@ const NavBar = () => {
           </>
         )}
       </ul>
-      <DarkModeToggle />
     </div>
   );
 };

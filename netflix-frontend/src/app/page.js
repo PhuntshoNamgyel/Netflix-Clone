@@ -30,25 +30,6 @@ const movieData = [
   { title: "Romantic Killer", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5B2JVi9lGpETHl_OxlgV1n8ucvWJxtT6ATR_P8RRpLAB8AdIuq533GpzLWDKdz-JYSYY&usqp=CAU", },
   { title: "Enola Holmes", poster: "https://image.tmdb.org/t/p/w500/riYInlsq2kf1AWoGm80JQW5dLKp.jpg", },
   { title: "The Alchemy Of Souls", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsKsGqkhteTm0knOAgNIP1cl1grwVC3fvcCA&s", },
-  { title: "Parasite", poster: "https://thedramacorner.com/wp-content/uploads/2024/04/ptg.jpg?w=292&h=429", },
-  { title: "King The Land", poster: "https://i.pinimg.com/736x/dd/ed/52/dded52b91dc518edf7c0021bb66901cc.jpg", },
-  { title: "One Piece", poster: "https://sequentialplanet.com/wp-content/uploads/2023/08/MV5BYzczMzllN2UtNDJmOS00MmE5LWE2MWYtNGEwODcwMDc2M2YyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_-1.jpg", },
-  { title: "Sweet And Sour", poster: "https://www.bworldonline.com/wp-content/uploads/2021/06/SweetnSour_Main_Couple_Vertical_RGB_EN-UK_PRE-1.jpg", },
-  { title: "When Life Gives You Tangerines", poster: "https://cdn.k-ennews.com/news/photo/202503/7511_19970_4951.jpg" },
-  { title: "The Fabulous", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG6Ydy-9ZCcSvntD6PHGsHs2COMkxU8sQp0HBhCHELW-6yykkdLKn7WRWbiUx7kkJhlP8&usqp=CAU", },
-  { title: "Love and Leashes", poster: "https://www.whats-on-netflix.com/wp-content/uploads/2022/01/love-and-leashes-netflix-poster.jpeg",},
-  { title: "Twenty Five Twenty One", poster: "https://i.pinimg.com/736x/ae/5a/1e/ae5a1e1ab66355aa0f1234bbcd102295.jpg", },
-  { title: "Sweet Home", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB5OYyVbse54QwrSa79Cpphev1ogok7GT8kw&s", },
-  { title: "Memories Of Ahlambra", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfXUGa16QjI1V9aZUhBf4G3a22PcLpNNMMJg&s" },
-  { title: "My Name", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcobB1iJhR7CmfErGvRUVhe6VaruKE2kMW0A&s" },
-  { title: "The Frog", poster: "https://preview.redd.it/netflix-drama-the-frog-teaser-character-posters-release-on-v0-c08gv9zbq0hd1.jpg?width=650&format=pjpg&auto=webp&s=0280553fd97e45ea6d746fc3db059eddad1b933a" },
-  { title: "Business Proposal", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-xpIvhHauNbdZrg4wWWrAUVUsS2Q3s7oIw&s" },
-  { title: "Celebrity", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmYEn6FjmmREaVU6CK7HTxIWRAIvMYwrhAA&s" },
-  { title: "Alive", poster: "https://resizing.flixster.com/RbankXkynBw7_H-Kt6pNdaJ5PF0=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2E0NDAzNzQ0LWMyNzgtNDRiNC1hOWI4LTI3MDlhOTBiNzMzYS53ZWJw" },
-  { title: "All Of Us Are Dead", poster: "https://ih1.redbubble.net/image.3230049794.8974/fposter,small,wall_texture,square_product,600x600.jpg" },
-  { title: "Suzume", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloR3cAR8SLUKUPw2v8RyqpDRJz7-mMHHzrMZp8-vt5hBxN5uXvSgZ17DCXLmkr8-2FLY&usqp=CAU" },
-  { title: "Yasuki", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPM1YgezAVBJifCA15yI57bY481d6vM-FrFQ&s" },
-  { title: "Demon Slayer", poster: "https://hips.hearstapps.com/hmg-prod/images/best-anime-netflix-demon-slayer-1668636437.png" },
 ];
 
 function Carousel({ title, movies, onSelect }) {
@@ -125,7 +106,10 @@ export default function Page() {
     <div className="flex min-h-screen bg-black">
       {/* Sidebar */}
       <aside className="w-16 flex flex-col items-center py-8 bg-[#141414] space-y-8">
-        <FaPlus className="text-2xl text-gray-400 hover:text-white cursor-pointer" />
+        <FaPlus 
+          className="text-2xl text-gray-400 hover:text-white cursor-pointer"
+          onClick={() => window.location.href = "/upload"} 
+        />
       </aside>
 
       {/* Main Content */}

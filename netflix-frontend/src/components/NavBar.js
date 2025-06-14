@@ -75,6 +75,8 @@ const NavBar = () => {
           </>
         )}
       </ul>
+     
+      <DarkModeToggle />
     </div>
   );
 };

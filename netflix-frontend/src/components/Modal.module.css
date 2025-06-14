@@ -17,7 +17,7 @@
     border-radius: 10px;
     width: 80%;
     max-width: 600px;
-    color: white;
+    color: rgb(255, 255, 255);
     position: relative;
   }
   
@@ -27,7 +27,7 @@
     right: 10px;
     background: none;
     border: none;
-    color: white;
+    color: rgb(255, 251, 251);
     font-size: 24px;
     cursor: pointer;
   }
